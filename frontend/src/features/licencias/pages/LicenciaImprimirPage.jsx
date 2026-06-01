@@ -175,10 +175,17 @@ const LicenciaImprimirPage = () => {
           height: '297mm',
           margin: '0 auto',
           backgroundColor: '#ffffff',
-          padding: '12mm 16mm',
+          padding: '8mm',
           boxSizing: 'border-box',
           fontFamily: 'Arial, sans-serif',
           color: '#000000',
+        }}>
+        {/* Borde interior */}
+        <div style={{
+          border: '4px solid #000180',
+          height: '100%',
+          padding: '4mm 12mm',
+          boxSizing: 'border-box',
           position: 'relative',
           overflow: 'hidden',
           display: 'flex',
@@ -194,7 +201,7 @@ const LicenciaImprimirPage = () => {
               top: '50%',
               left: '50%',
               transform: 'translate(-50%, -50%)',
-              width: '75%',
+              width: '90%',
               opacity: 0.08,
               pointerEvents: 'none',
               zIndex: 0,
@@ -206,15 +213,15 @@ const LicenciaImprimirPage = () => {
           <div style={{ position: 'relative', zIndex: 1, flex: 1, display: 'flex', flexDirection: 'column' }}>
 
             {/* ── ENCABEZADO ── */}
-            <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '10px' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '5px', marginBottom: '10px', marginLeft: '-10mm' }}>
               <img
                 src="/images/logo-lf.png"
                 alt="Logo"
-                style={{ height: '75px', width: 'auto', flexShrink: 0 }}
-                onError={(e) => { e.target.style.display = 'none' }}
+                style={{ height: '115px', width: 'auto', flexShrink: 0, opacity: 0.5 }}
+                onError={(e) => { e.target.style.display = 'none'}}
               />
               <p style={{
-                fontWeight: 'bold',
+                fontWeight: '900',
                 fontSize: '22px',
                 textTransform: 'uppercase',
                 margin: 0,
@@ -319,6 +326,7 @@ const LicenciaImprimirPage = () => {
             </div>
 
           </div>{/* fin contenido */}
+        </div>{/* fin borde interior */}
         </div>{/* fin hoja A4 */}
       </div>{/* fin fondo gris */}
     </>
