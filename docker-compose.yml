@@ -31,7 +31,8 @@ services:
       # - VITE_API_URL=http://localhost:8000
       - CHOKIDAR_USEPOLLING=true
     depends_on:
-      - backend
+      db:
+        condition: service_healthy
     stdin_open: true
     tty: true
 
